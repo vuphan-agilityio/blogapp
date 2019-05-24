@@ -1,0 +1,32 @@
+
+/**
+ *
+ * Custom style CSS for container-fluid of bootstrap
+ *
+ */
+
+.container-fluid::before,
+.container-fluid::after {
+  @extend %content-none;
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .container-fluid {
+    padding: 0 em(24) 0;
+  }
+}
+
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .container-fluid {
+    padding: 0 em(150) 0;
+  }
+}

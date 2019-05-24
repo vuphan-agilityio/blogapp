@@ -1,0 +1,25 @@
+/* links & type
+---------------*/
+a:link,
+a:active,
+a:visited {
+  @extend %text-decoration;
+}
+
+/* image default to fix scale image */
+img {
+  @extend %full-width;
+  @extend %auto-height;
+}
+
+* {
+  @extend %background-no-repeat;
+  @extend %border-box-sizing;
+}
+
+body {
+  color: $color-text-default;
+  font-size: 15px;
+  background-color: $color-background-default;
+  font-family: $roboto-regular;
+}

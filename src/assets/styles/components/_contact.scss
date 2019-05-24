@@ -1,0 +1,257 @@
+
+/**
+ *
+ * Apply style CSS for contact section of mobile UI
+ *
+ */
+
+.contact {
+  &__photo {
+    @include width-height(em(334), em(374));
+    @include background-image("background/desktop-contact.png");
+    @extend %display-none;
+  }
+
+  .container-fluid {
+    padding: 0 em(40);
+  }
+
+  .section-common__main-title {
+    @include text-size-line(em(20), em(40, 20));
+    @extend %text-align-center;
+    @extend %text-transform-capitalize;
+  }
+
+  &__main-content {
+    margin-top: em(18);
+  }
+
+  .form-contact {
+    .input-name {
+      width: 45%;
+      @extend %float-left;
+    }
+
+    .input-email {
+      width: 45%;
+      @extend %float-right;
+    }
+
+    .form-control {
+      border-bottom: em(1) solid $color-contact-input-border;
+      margin-bottom: em(18);
+      @extend %border-none;
+      @extend %padding-left-0;
+      @extend %box-shadow-none;
+      @extend %border-radius-0;
+
+      &::placeholder {
+        @include text-size-line(em(11), em(16, 11));
+      }
+    }
+
+    &__btn {
+      margin-bottom: em(35);
+      @extend %text-align-center;
+
+      &--submit {
+        color: $color-contact-btn-text;
+        background-color: $color-background-btn-default;
+        @include text-size-line(em(11), em(32, 11));
+        @include border-corner-radius(em(50, 11), em(1, 11), $color-background-btn-default);
+        @include width-height(em(140, 11), em(32, 11));
+        @extend %display-inline-block;
+        @extend %outline-none;
+      }
+    }
+  }
+
+  .contact-info {
+    color: $color-contact-text;
+    @extend %overflow-hidden;
+
+    &__content {
+      width: em(240);
+      @extend %margin-0-auto;
+      @extend %float-none;
+    }
+
+    p,
+    address {
+      @include text-size-line(em(11), em(16, 11));
+
+      a {
+        color: $color-contact-text;
+
+        span {
+          padding-right: em(8, 11);
+          line-height: em(16, 11);
+        }
+      }
+    }
+
+    .social-menu {
+      margin-top: em(20);
+      @extend %display-flex;
+      @extend %justify-content-flex-start;
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .contact {
+    .container-fluid {
+      padding: 0 em(86);
+    }
+
+    .contact-info {
+      p,
+      address {
+        padding-bottom: em(16);
+
+        a {
+          span {
+            padding-right: em(8, 11);
+            line-height: em(16, 11);
+          }
+        }
+      }
+
+      .social-menu {
+        margin-top: em(22);
+
+        .sprite {
+          background-image: url("../images/sprites/tablet-icon.png");
+        }
+
+        .sprite-pinterest-contact {
+          @include sprite-image-position(em(22), em(22), em(-96), em(-109));
+        }
+
+        .sprite-facebook-contact {
+          @include sprite-image-position(em(22), em(23), em(-76), em(-5));
+        }
+
+        .sprite-linkedin-contact {
+          @include sprite-image-position(em(23), em(23), em(-5), em(-109));
+        }
+
+        .sprite-twitter-contact {
+          @include sprite-image-position(em(27), em(23), em(-186), em(-115));
+        }
+
+        .sprite-google-plus-contact {
+          @include sprite-image-position(em(33), em(22), em(-108), em(-33));
+        }
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .contact {
+    padding-bottom: 0;
+
+    &__photo {
+      display: block;
+      padding: 0;
+    }
+
+    .container-fluid {
+      padding: 0 em(147);
+    }
+
+    .section-common__main-title {
+      @include text-size-line(em(44), em(48, 44));
+    }
+
+    &__main-content {
+      margin-top: em(69);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-contact {
+      margin: 0 em(20) 0;
+      padding: 0;
+
+      .input-name {
+        width: em(166);
+      }
+
+      .input-email {
+        width: em(166);
+      }
+
+      .form-control {
+        margin-bottom: em(38);
+
+        &::placeholder {
+          @include text-size-line(em(18), em(27, 18));
+        }
+      }
+
+      &__btn {
+        margin-bottom: 0;
+
+        &--submit {
+          @include text-size-line(em(16), em(48, 16));
+          @include width-height(em(210, 16), em(48, 16));
+        }
+      }
+    }
+
+    .contact-info {
+      padding: 0;
+
+      p,
+      address {
+        padding-bottom: em(26, 16);
+        @include text-size-line(em(16), em(24, 16));
+
+        a {
+          span {
+            padding-right: em(8, 16);
+            line-height: em(16, 16);
+          }
+        }
+      }
+
+      .social-menu {
+        margin-top: em(40);
+
+        .sprite {
+          background-image: url("../images/sprites/desktop-icon.png");
+        }
+
+        .sprite-pinterest-contact {
+          @include sprite-image-position(em(25), em(25), em(-153), em(-106));
+        }
+
+        .sprite-facebook-contact {
+          @include sprite-image-position(em(24), em(25), em(-97), em(-5));
+        }
+
+        .sprite-linkedin-contact {
+          @include sprite-image-position(em(25), em(25), em(-53), em(-106));
+        }
+
+        .sprite-twitter-contact {
+          @include sprite-image-position(em(30), em(24), em(-128), em(-143));
+        }
+
+        .sprite-google-plus-contact {
+          @include sprite-image-position(em(36), em(23), em(-131), em(-39));
+        }
+      }
+    }
+  }
+}

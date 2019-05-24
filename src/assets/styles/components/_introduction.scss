@@ -1,0 +1,91 @@
+
+/**
+ *
+ * Style CSS for introduction section of mobile UI
+ *
+ */
+
+.intro {
+  padding-top: em(45);
+  @include background-image("background/intro-image.jpg");
+  @include width-height(100%, em(312));
+  @extend %background-position-center;
+  @extend %text-align-center;
+
+  .container-fluid {
+    padding: 0 em(40);
+  }
+
+  &__main-title {
+    @include text-size-line(em(20), em(40, 20)); // Inside font size 20px
+    @extend %text-transform-capitalize;
+  }
+
+  &__main-desc {
+    padding: em(7, 11) 0 em(20, 11);
+    @include text-size-line(em(11), em(16, 11));
+  }
+
+  &__btn {
+    color: $color-intro-btn-text;
+    @include width-height(em(140, 11), em(32, 11));
+    @include text-size-line(em(11), em(32, 11));
+    @extend %display-inline-block;
+    @extend %outline-none;
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .intro {
+    .container-fluid {
+      padding: 0 em(150);
+    }
+
+    &__main-title {
+      @include text-size-line(em(32), em(40, 32));
+    }
+
+    &__main-desc {
+      padding: em(26, 11) 0 em(29, 11);
+    }
+
+    &__btn {
+      line-height: em(40, 11);
+      @include width-height(em(140, 11), em(40, 11));
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .intro {
+    @include width-height(100%, em(588));
+
+    .container-fluid {
+      padding: 0 30%;
+    }
+
+    &__main-title {
+      padding-top: em(163, 44);
+      @include text-size-line(em(44), em(48, 44));
+    }
+
+    &__main-desc {
+      padding: em(23, 16) 0 em(42, 16);
+      @include text-size-line(em(16), em(24, 16));
+    }
+
+    &__btn {
+      line-height: em(40, 16);
+      @include width-height(em(210, 16), em(48, 16));
+      @include text-size-line(em(16), em(48, 16));
+    }
+  }
+}

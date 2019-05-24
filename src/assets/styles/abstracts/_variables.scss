@@ -1,0 +1,104 @@
+// Define all path to images
+$path-images: "../images/";
+
+// Define all fonts name will use
+$roboto-regular: "RobotoRegular";
+
+// Define variables with name color
+$matterhorn: #4b4b4b;
+$grey: #7d7d7d;
+$white-smoke: #f6f6f6;
+$marzipan: #ebcb80;
+$black: #000;
+$white: #fff;
+$whisper: #e6e6e6;
+
+$black-shadow-2: rgba(0, 0, 0, 0.2);
+$black-shadow-5: rgba(0, 0, 0, 0.5);
+
+// Define browser context used for funtion convert px to em
+$font-size-default: 15;
+
+// Define variables text color for title and desc
+$color-main-title: $matterhorn;
+$color-main-desc: $matterhorn;
+
+// Define variables color default
+$color-background-default: $white;
+$color-text-default: $white;
+$color-background-btn-default: $marzipan;
+$color-nav-menu-text-default: $white;
+
+// Define variables color of title and description
+$color-main-title-default: $matterhorn;
+$color-main-desc-default: $matterhorn;
+
+// Define variables color for plan section
+$color-plan-background: $white-smoke;
+$color-plan-card-background: $marzipan;
+
+// Define variables color for map
+$color-map-background: $matterhorn;
+
+// Define variables color for footer
+$color-footer-background: $matterhorn;
+$color-footer-title-text: $marzipan;
+$color-footer-desc-text: $white;
+$color-footer-text: $white;
+$color-footer-btn-subcribe-background: $marzipan;
+$color-footer-btn-subcribe-text: $matterhorn;
+$color-footer-input-border: $grey;
+
+// Define variables color for features section
+$color-feature-title: $matterhorn;
+$color-feature-desc: $matterhorn;
+
+// Define variables color for introduction section
+$color-intro-btn-text: $matterhorn;
+
+// Define variables color for testimonials section
+$color-testimonials-text: $matterhorn;
+$color-testimonials-border-avatar: $whisper;
+$color-testimonials-position-job: $grey;
+$color-testimonials-border-line: $white-smoke;
+
+// Define variables color for plan section
+$color-plan-background: $white-smoke;
+$color-plan-text: $matterhorn;
+$color-plan-golden-package-background: $marzipan;
+$color-plan-silver-package-background: $matterhorn;
+$color-plan-platinum-package-background: $black;
+$color-plan-golden-package-text: $white;
+$color-plan-golden-package-name-text: $matterhorn;
+$color-plan-golden-btn-background: $matterhorn;
+$color-plan-silver-package-text: $matterhorn;
+$color-plan-silver-package-name-text: $marzipan;
+$color-plan-silver-btn-background: $marzipan;
+$color-plan-platinum-package-text: $white;
+$color-plan-platinum-package-name-text: $marzipan;
+$color-plan-platinum-btn-background: $marzipan;
+$color-plan-btn-background: $matterhorn;
+$color-plan-radio-text: $matterhorn;
+$color-plan-box-shadow: $black-shadow-5;
+
+// Define variables color for portfolio section
+$color-portfolio-boder-line: $white;
+$color-portfolio-pagination-icon: $grey;
+$color-portfolio-pagination-btn: $matterhorn;
+$color-portfolio-box-shadow: $black-shadow-2;
+$color-portfolio-text-btn-active: $marzipan;
+
+// Define variables color for team section
+$color-team-text: $white;
+$color-dot-background: $white;
+$color-dot-border: $white;
+
+// Define variables color for contact section
+$color-contact-input-border: $grey;
+$color-contact-btn-text: $matterhorn;
+$color-contact-text: $matterhorn;
+
+// Define variables color for navigation in header page
+$color-nav-background: $black;
+$color-nav-text: $grey;
+$color-nav-link-hover: $white;

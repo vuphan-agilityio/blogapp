@@ -1,0 +1,30 @@
+
+/**
+ *
+ * Style CSS for carousel component
+ *
+ */
+
+.carousel {
+  @extend %text-align-center;
+
+  &-dot {
+    margin: 0 em(4);
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+    border: em(2) solid $color-dot-border;
+    @include width-height(em(8), em(8));
+    @extend %display-inline-block;
+    @extend %cursor-pointer;
+    @extend %background-color-transparent;
+
+    &:hover {
+      background-color: $color-dot-background;
+    }
+  }
+
+  .active {
+    background-color: $color-dot-background;
+  }
+
+}

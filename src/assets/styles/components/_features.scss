@@ -1,0 +1,112 @@
+
+/**
+ *
+ * Style CSS for features section
+ *
+ */
+
+.feature {
+  &-photo {
+    @include background-image("background/features.png");
+    @include width-height(em(290), em(168));
+    @extend %margin-0-auto;
+  }
+
+  &-item {
+    padding: 0 em(17);
+    margin-bottom: em(40);
+
+    &__title-content {
+      color: $color-feature-title;
+      margin-bottom: em(8, 12);
+      @include text-size-line(em(12), em(16, 12));
+      @extend %text-transform-uppercase;
+    }
+
+    &__desc-content {
+      color: $color-feature-desc;
+      @include text-size-line(em(11), em(16, 11));
+    }
+
+    &__icon {
+      @extend %float-left;
+    }
+
+    &__content {
+      @extend %padding-right-0;
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .feature {
+    &-photo {
+      float: right;
+      @include width-height(58.33333%, em(463));
+      @include background-image("background/features.png");
+    }
+
+    &-item {
+      .sprite {
+        background-image: url("../images/sprites/tablet-icon.png");
+      }
+
+      .sprite-diamond {
+        @include sprite-image-position(em(34), em(29), em(-5), em(-5));
+      }
+
+      .sprite-responsive {
+        @include sprite-image-position(em(41), em(34), em(-156), em(-71));
+      }
+
+      .sprite-layers {
+        @include sprite-image-position(em(26), em(34), em(-107), em(-65));
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .feature {
+    &-photo {
+      float: right;
+      @include width-height(58.33333%, em(463));
+      @include background-image("background/features.png");
+    }
+
+    &-item {
+      &__title-content {
+        margin-bottom: em(35, 16);
+        @include text-size-line(em(16), em(30, 16));
+      }
+
+      &__desc-content {
+        @include text-size-line(em(16), em(24, 16));
+      }
+
+      .sprite {
+        background-image: url("../images/sprites/desktop-icon.png");
+      }
+
+      .sprite-diamond {
+        @include sprite-image-position(em(47), em(40), em(-5), em(-5));
+      }
+
+      .sprite-responsive {
+        @include sprite-image-position(em(55), em(46), em(-190), em(-87));
+      }
+
+      .sprite-layers {
+        @include sprite-image-position(em(38), em(50), em(-5), em(-106));
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+
+/**
+ *
+ * Apply style CSS for footer of mobile UI
+ *
+ */
+
+.page-footer {
+  background-color: $color-footer-background;
+  color: $color-footer-text;
+
+  .container-fluid {
+    @extend %display-flex;
+    @extend %flex-wrap;
+
+    .section-common__main-title {
+      color: $color-footer-title-text;
+      @include text-size-line(em(24), em(28, 24));
+    }
+
+    .section-common__main-desc {
+      color: $color-footer-desc-text;
+      @include text-size-line(em(12), em(16, 12));
+    }
+  }
+
+  &__subcribe {
+    @include text-size-line(em(12), em(14, 12));
+    @extend %text-align-center;
+    @extend %text-transform-uppercase;
+  }
+
+  .navigation {
+    margin-bottom: em(32, 12);
+    @include text-size-line(em(12), em(16, 12));
+    @extend %text-transform-none;
+
+    .main-menu {
+      @extend %float-left;
+      padding-bottom: em(8, 12);
+
+      a {
+        padding: 0;
+      }
+    }
+  }
+
+  &__follow {
+    @extend %text-align-center;
+    @extend %text-transform-uppercase;
+    @extend %flex-grow-1;
+
+    p {
+      @include text-size-line(em(12), em(14, 12));
+    }
+
+    .social-menu {
+      padding: em(12) 0 em(19);
+      @extend %display-flex;
+      @extend %justify-content-center;
+    }
+  }
+
+  &__copyright {
+    @include text-size-line(em(11), em(16, 11));
+    @extend %text-align-center;
+    @extend %flex-grow-1;
+  }
+}
+
+.form-subcribe {
+  padding: em(20, 12) 0;
+
+  .input-group {
+    @extend %margin-0-auto;
+
+    &-addon {
+      background-color: $color-footer-btn-subcribe-background;
+      @extend %cursor-pointer;
+
+      span {
+        color: $color-footer-btn-subcribe-text;
+      }
+    }
+
+    .form-control {
+      color: $color-footer-text;
+      opacity: 0.5;
+      border: em(0.533333, 12) solid $color-footer-input-border;
+      @extend %box-shadow-none;
+      @extend %background-color-transparent;
+
+      &::placeholder {
+        color: $color-footer-text;
+        opacity: 0.5;
+        @include text-size-line(em(11, 14), em(14, 11));
+      }
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .page-footer {
+    .navigation {
+      padding-top: em(50, 12);
+    }
+
+    .sprite {
+      background-image: url("../images/sprites/tablet-icon.png");
+    }
+
+    .sprite-pinterest-footer {
+      @include sprite-image-position(em(18), em(18), em(-128), em(-109));
+    }
+
+    .sprite-linkedin-footer {
+      @include sprite-image-position(em(18), em(18), em(-38), em(-109));
+    }
+
+    .sprite-facebook-footer {
+      @include sprite-image-position(em(19), em(18), em(-108), em(-5));
+    }
+
+    .sprite-twitter-footer {
+      @include sprite-image-position(em(23), em(18), em(-5), em(-148));
+    }
+
+    .sprite-google-plus-footer {
+      @include sprite-image-position(em(26), em(18), em(-5), em(-65));
+    }
+
+    .sprite-instagram-footer {
+      @include sprite-image-position(em(18), em(18), em(-79), em(-65));
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .page-footer {
+    .section-common__main-title {
+      @include text-size-line(em(38), em(42, 38));
+    }
+
+    .section-common__main-desc {
+      @include text-size-line(em(18), em(24, 18));
+    }
+
+    &__subcribe {
+      @include text-size-line(em(18), em(21, 18));
+    }
+
+    .navigation {
+      padding-top: em(70, 18);
+      @include text-size-line(em(18), em(24, 18));
+
+      .navigation-menu {
+        .main-menu {
+          padding-bottom: em(12, 18);
+        }
+      }
+    }
+
+    &__follow {
+      p {
+        @include text-size-line(em(18), em(21, 18));
+      }
+
+      .social-menu {
+        padding-bottom: em(23);
+
+        .sprite {
+          background-image: url("../images/sprites/desktop-icon.png");
+        }
+
+        .sprite-pinterest-footer {
+          @include sprite-image-position(em(25), em(25), em(-53), em(-141));
+        }
+
+        .sprite-linkedin-footer {
+          @include sprite-image-position(em(25), em(24), em(-88), em(-106));
+        }
+
+        .sprite-facebook-footer {
+          @include sprite-image-position(em(24), em(24), em(-131), em(-5));
+        }
+
+        .sprite-twitter-footer {
+          @include sprite-image-position(em(30), em(24), em(-168), em(-143));
+        }
+
+        .sprite-google-plus-footer {
+          @include sprite-image-position(em(36), em(23), em(-5), em(-72));
+        }
+
+        .sprite-instagram-footer {
+          @include sprite-image-position(em(24), em(24), em(-156), em(-72));
+        }
+      }
+    }
+
+    &__copyright {
+      @include text-size-line(em(16), em(24, 16));
+    }
+  }
+
+  .form-subcribe {
+    padding: em(25, 18) 0;
+
+    .input-group {
+
+      &-addon {
+        @include width-height(em(51, 14), em(48, 14));
+      }
+
+      .form-control {
+        height: em(48, 14);
+
+        &::placeholder {
+          @include text-size-line(em(16, 14), em(48, 14));
+        }
+      }
+    }
+  }
+}

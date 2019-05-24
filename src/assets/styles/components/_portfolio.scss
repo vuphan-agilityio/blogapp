@@ -1,0 +1,227 @@
+
+/**
+ *
+ * Apply style CSS for portfolio section of mobile UI
+ *
+ */
+
+.portfolio {
+  .section-common__main-title {
+    padding-bottom: em(18);
+  }
+
+  &__detail {
+    @extend %padding-0;
+  }
+
+  &__photo {
+    height: em(145);
+    @extend %overflow-hidden;
+
+    img {
+      z-index: 99;
+      @extend %position-relative;
+    }
+
+    &:hover .portfolio-intro {
+      z-index: 999;
+    }
+  }
+
+  &-intro {
+    z-index: 9;
+    padding: em(7) em(15) 0;
+    @extend %top-0;
+    @extend %position-absolute;
+
+    &__main {
+      @extend %position-relative;
+    }
+
+    &__title {
+      @include text-size-line(em(14), em(32, 14)); // Inside font size 14px
+    }
+
+    &__view-icon {
+      span {
+        @include text-size-line(em(14), em(32, 14));
+      }
+    }
+
+    &__time {
+      @include text-size-line(em(11), em(16, 11)); // Inside font size 11px
+      padding-bottom: em(8, 11);
+
+      &::after {
+        content: "";
+        border-bottom: em(2, 11) solid $color-portfolio-boder-line;
+        @extend %position-absolute;
+        @extend %bottom-0;
+        @extend %left-0;
+        @include width-height(em(14, 11), auto);
+      }
+    }
+
+    &__desc {
+      padding-top: em(12, 10);
+      @include text-size-line(em(10), em(16, 10)); // Inside font size 10px
+    }
+
+    &__overview {
+      @extend %display-none;
+    }
+  }
+}
+
+.pagination-bar {
+  padding-top: em(33);
+  @extend %display-flex;
+  @extend %justify-content-center;
+
+  li {
+    margin: 0 em(10);
+    @extend %text-align-center;
+    @extend %float-left;
+
+    a {
+      color: $color-portfolio-pagination-icon;
+      @include text-size-line(em(12), em(32, 12));
+    }
+  }
+
+  .active {
+    background-color: $color-background-default;
+    border-radius: 50%;
+    box-shadow: 0 em(2) em(4) $color-portfolio-box-shadow;
+    @include width-height(em(32), em(32));
+    @extend %display-block;
+
+    a {
+      color: $color-portfolio-text-btn-active;
+    }
+  }
+
+  &__icon-pre,
+  &__icon-next {
+    color: $color-portfolio-pagination-icon;
+    @include text-size-line(em(20), em(32, 20));
+    @extend %cursor-pointer;
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .portfolio {
+    .section-common__main-title {
+      padding-bottom: em(29);
+    }
+
+    &__photo {
+      height: em(240);
+    }
+
+    &-intro {
+      padding: em(41) em(17) 0;
+
+      &__title {
+        @include text-size-line(em(24), em(32, 24));
+      }
+
+      &__view-icon {
+        display: none;
+      }
+
+      &__time {
+        padding-bottom: em(12, 11);
+      }
+
+      &__desc {
+        padding-top: em(16, 10);
+      }
+
+      &__overview {
+        display: block;
+        margin-top: em(10);
+      }
+
+      &__view,
+      &__love,
+      &__comment {
+        span {
+          margin-right: em(4);
+        }
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .portfolio {
+    .section-common__main-title {
+      padding-bottom: em(54);
+    }
+
+    &__photo {
+      height: em(380);
+    }
+
+    &-intro {
+      padding: em(58) em(40) 0;
+
+      &__title {
+        @include text-size-line(em(32), em(42, 32));
+      }
+
+      &__view-icon {
+        display: none;
+      }
+
+      &__time {
+        padding-bottom: em(31, 18);
+        @include text-size-line(em(18), em(30, 18));
+      }
+
+      &__desc {
+        padding-top: em(38, 16);
+        @include text-size-line(em(16), em(24, 16));
+      }
+
+      &__overview {
+        display: block;
+        margin-top: em(30);
+      }
+
+      &__view,
+      &__love,
+      &__comment {
+        span {
+          margin-right: em(6);
+        }
+      }
+    }
+  }
+
+  .pagination-bar {
+    padding-top: em(39);
+
+    li {
+      margin: 0 em(15);
+
+      a {
+        @include text-size-line(em(18), em(32, 18));
+      }
+    }
+
+    &__icon-pre,
+    &__icon-next {
+      @include text-size-line(em(20), em(32, 20));
+    }
+  }
+}

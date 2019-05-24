@@ -1,0 +1,55 @@
+// Style CSS for section component
+.section-common {
+  padding: em(30) 0;
+
+  &__main-title {
+    color: $color-main-title-default;
+    @include text-size-line(em(20), em(40, 20));
+    @extend %text-align-center;
+  }
+
+  &__main-desc {
+    color: $color-main-desc-default;
+    padding: em(3, 12) 0 em(29, 12);
+    @include text-size-line(em(12), em(24));
+    @extend %text-align-center;
+    @extend %text-transform-uppercase;
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .section-common {
+    padding: em(40) 0;
+
+    &__main-title {
+      @include text-size-line(em(32), em(40, 32));
+    }
+
+    &__main-desc {
+      padding: em(22, 12) 0 em(49, 12);
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .section-common {
+    padding: em(60) 0;
+
+    &__main-title {
+      @include text-size-line(em(44), em(48, 44));
+    }
+
+    &__main-desc {
+      padding: em(32, 18) 0 em(55, 18);
+      @include text-size-line(em(18), em(30, 18));
+    }
+  }
+}

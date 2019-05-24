@@ -1,0 +1,31 @@
+
+/**
+ *
+ * Style CSS for map section of mobile UI
+ *
+ */
+
+.map {
+  @include width-height(100%, em(268));
+  @include background-image("background/map.jpg");
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .map {
+    @include width-height(100%, em(216));
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .map {
+    @include width-height(100%, em(400));
+  }
+}

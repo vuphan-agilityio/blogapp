@@ -1,0 +1,107 @@
+
+/**
+ *
+ * Style CSS for banner
+ *
+ */
+
+.banner {
+  @include width-height(100%, em(540));
+  @include background-image("background/hero-image.jpg");
+  @extend %background-position-center;
+  @extend %position-relative;
+  @extend %display-flex;
+  @extend %centering-horizontal-vertical;
+
+  .branding {
+    @extend %full-width;
+    @extend %text-align-center;
+
+    &__slogan {
+      padding: 0 em(46, 20) em(35, 20);
+      @include text-size-line(em(20), em(24, 20));
+      @extend %text-transform-capitalize;
+    }
+  }
+
+  .video-frame {
+    @extend %position-relative;
+    @extend %display-flex;
+    @extend %justify-content-center;
+
+    video {
+      @include width-height(em(240), em(140));
+      @include background-image("../images/background/video-frame.png");
+      @extend %cursor-pointer;
+    }
+
+    .sprite-play-button {
+      @extend %position-absolute;
+      @extend %align-self-center;
+      @extend %cursor-pointer;
+      @extend %absolute-horizontal-vertical-centering;
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .banner {
+    @include width-height(100%, em(564));
+
+    .branding {
+      &__slogan {
+        padding: 0 em(122, 32) em(34, 32);
+        @include text-size-line(em(32), em(36, 32));
+      }
+    }
+
+    .video-frame {
+      video {
+        @include width-height(em(345), em(201));
+      }
+
+      .sprite {
+        background-image: url("../images/sprites/tablet-icon.png");
+      }
+
+      .sprite-play-button {
+        @include sprite-image-position(em(56), em(56), em(-165), em(-5));
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .banner {
+    @include width-height(100%, em(768));
+
+    .branding {
+      &__slogan {
+        padding: 0 em(300, 44) em(53, 44);
+        @include text-size-line(em(44), em(48, 44));
+      }
+    }
+
+    .video-frame {
+      video {
+        @include width-height(em(555), em(324));
+      }
+
+      .sprite {
+        background-image: url("../images/sprites/desktop-icon.png");
+      }
+
+      .sprite-play-button {
+        @include sprite-image-position(em(72), em(72), em(-194), em(-5));
+      }
+    }
+  }
+}

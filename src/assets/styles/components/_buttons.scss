@@ -1,0 +1,7 @@
+// Define all style for buttons at here
+.btn {
+  color: $color-text-default;
+  background-color: $color-background-btn-default;
+  @extend %text-transform-uppercase;
+  @include border-corner-radius(em(50), em(1), $color-background-btn-default);
+}

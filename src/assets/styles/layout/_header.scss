@@ -1,0 +1,211 @@
+
+/**
+ *
+ * Apply style css for header of mobile UI
+ *
+ */
+
+.page-header {
+  z-index: 9; // the first z-index value
+  @extend %full-width;
+  @extend %position-absolute;
+
+  .container-fluid {
+    padding-top: em(21);
+    @extend %display-flex;
+    @extend %justify-content-space-between;
+  }
+
+  .navigation {
+    order: 3;
+
+    &:hover .navigation-menu {
+      width: 35%;
+    }
+  }
+
+  .navigation-menu {
+    background-color: $color-nav-background;
+    transition: 0.5s;
+    padding: em(20) 0;
+    top: em(50);
+    @extend %position-fixed;
+    @extend %right-0;
+    @extend %width-0;
+    @extend %overflow-x-hidden;
+
+    .main-menu {
+      @extend %float-none;
+      @extend %text-align-left;
+
+      a {
+        padding: em(8) em(8) em(8) em(32);
+        transition: 0.3s;
+        @extend %display-block;
+      }
+
+      a:hover {
+        color: $color-nav-link-hover;
+      }
+    }
+  }
+
+  .logo {
+    &__link {
+      order: 1;
+      background-image: url("../images/logo/mobile-hofmann.png");
+      @include width-height(em(22), em(24));
+      @extend %display-block;
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .page-header {
+    .container-fluid {
+      padding-top: em(32);
+    }
+
+    .navigation {
+      order: 2;
+
+      &:hover .navigation-menu {
+        width: unset;
+      }
+
+      .glyphicon-menu-hamburger {
+        display: none;
+      }
+    }
+
+    .navigation-menu {
+      background-color: transparent;
+      padding: 0;
+      position: relative;
+      width: unset;
+      top: unset;
+      right: unset;
+
+      .main-menu {
+        float: left;
+        text-align: center;
+
+        a {
+          padding: 0 em(16, 12);
+        }
+
+        a:hover {
+          color: $color-nav-link-hover;
+        }
+      }
+    }
+
+    .social-menu {
+      order: 3;
+    }
+
+    .logo {
+      &__link {
+        @include width-height(em(24), em(26));
+        background-image: url("../images/logo/tablet-hofmann.png");
+      }
+    }
+
+    .social-menu {
+      .sprite {
+        background-image: url("../images/sprites/tablet-icon.png");
+      }
+
+      .sprite-twitter {
+        @include sprite-image-position(em(20), em(16), em(-156), em(-115));
+      }
+
+      .sprite-facebook {
+        @include sprite-image-position(em(17), em(16), em(-49), em(-5));
+      }
+
+      .sprite-instagram {
+        @include sprite-image-position(em(16), em(16), em(-49), em(-33));
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .page-header {
+    .container-fluid {
+      padding-top: em(48);
+    }
+
+    .navigation {
+      order: 2;
+
+      &:hover .navigation-menu {
+        width: unset;
+      }
+
+      .glyphicon-menu-hamburger {
+        display: none;
+      }
+    }
+
+    .navigation-menu {
+      background-color: transparent;
+      padding: 0;
+      position: relative;
+      width: unset;
+      top: unset;
+      right: unset;
+
+      .main-menu {
+        float: left;
+        text-align: center;
+
+        a {
+          padding: 0 em(25, 18);
+        }
+
+        a:hover {
+          color: $color-nav-link-hover;
+        }
+      }
+    }
+
+    .social-menu {
+      order: 3;
+    }
+
+    .logo {
+      &__link {
+        @include width-height(em(36), em(40));
+        background-image: url("../images/logo/desktop-hofmann.png");
+      }
+    }
+
+    .social-menu {
+      .sprite {
+        background-image: url("../images/sprites/desktop-icon.png");
+      }
+
+      .sprite-twitter {
+        @include sprite-image-position(em(30), em(24), em(-88), em(-143));
+      }
+
+      .sprite-facebook {
+        @include sprite-image-position(em(25), em(24), em(-62), em(-5));
+      }
+
+      .sprite-instagram {
+        @include sprite-image-position(em(24), em(24), em(-88), em(-72));
+      }
+    }
+  }
+}

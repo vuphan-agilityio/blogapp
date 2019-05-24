@@ -1,0 +1,102 @@
+
+/**
+ *
+ * Style CSS for team section of mobile UI
+ *
+ */
+
+.team {
+  @include background-image("background/team.jpg");
+  @include width-height(100%, auto);
+
+  .container-fluid {
+    padding: 0 em(40);
+    @extend %overflow-hidden;
+  }
+
+  &-member-detail {
+    color: $color-team-text;
+
+    &__name {
+      @include text-size-line(em(24), em(32, 24));
+      @extend %text-transform-capitalize;
+    }
+
+    &__position-job {
+      color: $color-team-text;
+      padding: em(5, 12) 0 em(24, 12);
+      @include text-size-line(em(12), em(16, 12));
+      @extend %border-none;
+      @extend %text-transform-uppercase;
+    }
+
+    &__status {
+      padding: 0 0 em(36, 11) 0;
+      @include text-size-line(em(11), em(16, 11));
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .team {
+    &-member-detail {
+      &__name {
+        padding: 0;
+      }
+
+      &__position-job {
+        padding: em(5, 12) 0 em(16, 12);
+      }
+    }
+
+    &-carousel {
+      padding: 0 0 0 em(42);
+    }
+
+    .carousel {
+      &__icon-item {
+        margin-bottom: em(9.13);
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .team {
+    @include width-height(100%, em(590));
+
+    &-member-detail {
+      &__name {
+        padding: em(169, 32) 0 0;
+        @include text-size-line(em(32), em(42, 32));
+      }
+
+      &__position-job {
+        padding: em(7, 18) 0 em(22, 18);
+        @include text-size-line(em(18), em(22, 18));
+      }
+
+      &__status {
+        @include text-size-line(em(16), em(20, 16));
+      }
+    }
+
+    &-carousel {
+      padding: 0 0 0 em(89);
+    }
+
+    .carousel {
+      &__icon-item {
+        margin-bottom: em(11.43);
+      }
+    }
+  }
+}

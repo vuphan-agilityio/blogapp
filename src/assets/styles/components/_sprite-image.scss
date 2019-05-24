@@ -1,0 +1,103 @@
+/**
+ *
+ * Style CSS for all icon used sprite image
+ *
+ */
+
+.sprite {
+  background-image: url("../images/sprites/mobile-icon.png");
+  background-repeat: no-repeat;
+  @extend %display-block;
+}
+
+.sprite-diamond {
+  @include sprite-image-position(em(34), em(29), em(-5), em(-5));
+}
+
+.sprite-facebook {
+  @include sprite-image-position(em(17), em(16), em(-49), em(-5));
+}
+
+.sprite-facebook-contact {
+  @include sprite-image-position(em(22), em(23), em(-76), em(-5));
+}
+
+.sprite-facebook-footer {
+  @include sprite-image-position(em(19), em(18), em(-108), em(-5));
+}
+
+.sprite-facebook-testimonials {
+  @include sprite-image-position(em(18), em(18), em(-137), em(-5));
+}
+
+.sprite-google-plus-contact {
+  @include sprite-image-position(em(33), em(22), em(-108), em(-33));
+}
+
+.sprite-google-plus-footer {
+  @include sprite-image-position(em(26), em(18), em(-5), em(-65));
+}
+
+.sprite-google-plus-testimonials {
+  @include sprite-image-position(em(28), em(18), em(-41), em(-65));
+}
+
+.sprite-instagram {
+  @include sprite-image-position(em(16), em(16), em(-49), em(-33));
+}
+
+.sprite-instagram-footer {
+  @include sprite-image-position(em(18), em(18), em(-79), em(-65));
+}
+
+.sprite-instagram-testimonials {
+  @include sprite-image-position(em(18), em(18), em(-79), em(-65));
+}
+
+.sprite-layers {
+  @include sprite-image-position(em(26), em(34), em(-107), em(-65));
+}
+
+.sprite-linkedin-contact {
+  @include sprite-image-position(em(23), em(23), em(-5), em(-109));
+}
+
+.sprite-linkedin-footer {
+  @include sprite-image-position(em(18), em(18), em(-38), em(-109));
+}
+
+.sprite-linkedin-testimonials {
+  @include sprite-image-position(em(20), em(18), em(-66), em(-109));
+}
+
+.sprite-pinterest-contact {
+  @include sprite-image-position(em(22), em(22), em(-96), em(-109));
+}
+
+.sprite-pinterest-footer {
+  @include sprite-image-position(em(18), em(18), em(-128), em(-109));
+}
+
+.sprite-play-button {
+  @include sprite-image-position(em(56), em(56), em(-165), em(-5));
+}
+
+.sprite-responsive {
+  @include sprite-image-position(em(41), em(34), em(-156), em(-71));
+}
+
+.sprite-twitter {
+  @include sprite-image-position(em(20), em(16), em(-156), em(-115));
+}
+
+.sprite-twitter-contact {
+  @include sprite-image-position(em(27), em(23), em(-186), em(-115));
+}
+
+.sprite-twitter-footer {
+  @include sprite-image-position(em(23), em(18), em(-5), em(-148));
+}
+
+.sprite-twitter-testimonials {
+  @include sprite-image-position(em(24), em(18), em(-38), em(-148));
+}

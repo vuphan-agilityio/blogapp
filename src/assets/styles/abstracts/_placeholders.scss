@@ -1,0 +1,282 @@
+// Apply flexbox to block
+%centering-horizontal-vertical {
+  align-items: center;
+  align-self: center;
+}
+
+%display-flex {
+  display: flex;
+}
+
+%justify-content-center {
+  justify-content: center;
+}
+
+%justify-content-space-between {
+  justify-content: space-between;
+}
+
+%justify-content-flex-start {
+  justify-content: flex-start;
+}
+
+%align-self-flex-end {
+  align-self: flex-end;
+}
+
+%align-self-center {
+  align-self: center;
+}
+
+%flex-grow-1 {
+  flex-grow: 1;
+}
+
+%flex-wrap {
+  flex-wrap: wrap;
+}
+
+// Apply hacking code for clear fix of block
+%clear-fix {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+%overflow-hidden {
+  overflow: hidden;
+}
+
+%overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+// Define all placeholders connection with float property
+%float-left {
+  float: left;
+}
+
+%float-right {
+  float: right;
+}
+
+%float-none {
+  float: none;
+}
+
+// Define all placeholders connection with display property
+%display-block {
+  display: block;
+}
+
+%display-inline-block {
+  display: inline-block;
+}
+
+%display-none {
+  display: none;
+}
+
+// Define all placeholders connection with position property
+%position-absolute {
+  position: absolute;
+}
+
+%position-relative {
+  position: relative;
+}
+
+%position-fixed {
+  position: fixed;
+}
+
+%left-0 {
+  left: 0;
+}
+
+%right-0 {
+  right: 0;
+}
+
+%top-0 {
+  top: 0;
+}
+
+%bottom-0 {
+  bottom: 0;
+}
+
+// Define all placeholders connection with width property
+%full-width {
+  width: 100%;
+}
+
+%width-auto {
+  width: auto;
+}
+
+%width-0 {
+  width: 0;
+}
+
+// Define all placeholders connection with height property
+%full-height {
+  height: 100%;
+}
+
+%auto-height {
+  height: auto;
+}
+
+// Define all placeholders connection with text-transform property
+%text-transform-uppercase {
+  text-transform: uppercase;
+}
+
+%text-transform-capitalize {
+  text-transform: capitalize;
+}
+
+%text-transform-none {
+  text-transform: none;
+}
+
+// Define all placeholders connection with text-align property
+%text-align-center {
+  text-align: center;
+}
+
+%text-align-left {
+  text-align: left;
+}
+
+// Define all placeholders connection with margin property
+%margin-0-auto {
+  margin: 0 auto;
+}
+
+%margin-top-0 {
+  margin-top: 0;
+}
+
+%margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+%margin-left-0 {
+  margin-left: 0;
+}
+
+%margin-right-0 {
+  margin-right: 0;
+}
+
+%margin-0 {
+  margin: 0;
+}
+
+// Define all placeholders connection with padding property
+%padding-top-0 {
+  padding-top: 0;
+}
+
+%padding-bottom-0 {
+  padding-bottom: 0;
+}
+
+%padding-left-0 {
+  padding-left: 0;
+}
+
+%padding-right-0 {
+  padding-right: 0;
+}
+
+%padding-0 {
+  padding: 0;
+}
+
+// Define all placeholders connection with none border
+%border-bottom-none {
+  border-bottom: none;
+}
+
+%border-none {
+  border: none;
+}
+
+%border-radius-0 {
+  border-radius: 0;
+}
+
+// Define all placeholders connection with vertical-align
+%vertical-align-super {
+  vertical-align: super;
+}
+
+// Define trick text hidden and show when hover on block
+%truncate-string-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%white-space-inherit {
+  white-space: inherit;
+}
+
+// Define all placeholders connection with cursor
+%cursor-pointer {
+  cursor: pointer;
+}
+
+// Define all placeholders connection with text-decoration
+%text-decoration {
+  text-decoration: none;
+}
+
+// Define all placeholders connection with box-sizing
+%border-box-sizing {
+  box-sizing: border-box;
+}
+
+// Define all placeholders connection with background
+%background-no-repeat {
+  background-repeat: no-repeat;
+}
+
+%background-color-transparent {
+  background-color: transparent;
+}
+
+%background-position-center {
+  background-position: center;
+}
+
+%background-size-cover {
+  background-size: cover;
+}
+
+// Define all placeholders connection with content property
+%content-none {
+  content: none;
+}
+
+// Define placeholders about absolute horizontal vertical centering
+%absolute-horizontal-vertical-centering {
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+// Define all placeholders connection with outline
+%outline-none {
+  outline: none;
+}
+
+// Define all placeholders connection with box-shadow
+%box-shadow-none {
+  box-shadow: none;
+}

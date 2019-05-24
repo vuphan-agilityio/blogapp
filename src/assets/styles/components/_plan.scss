@@ -1,0 +1,228 @@
+
+/**
+ *
+ * Style CSS for plan section of mobile UI
+ *
+ */
+
+.plan {
+  background-color: $color-plan-background;
+
+  .section-common__main-title {
+    padding-bottom: em(33, 20);
+  }
+
+  &__package {
+    margin-bottom: em(44);
+    @extend %position-relative;
+
+    .active {
+      z-index: 999;
+      @extend %position-relative;
+    }
+  }
+
+  &__main-package {
+    padding: em(24) 0 em(28);
+    border-radius: em(8, 11);
+    box-shadow: 0 em(8) em(16) $color-plan-box-shadow;
+    @extend %text-align-center;
+    @extend %position-absolute;
+  }
+
+  &__golden-package {
+    background-color: $color-plan-golden-package-background;
+    color: $color-plan-text;
+    @include width-height(em(210), auto);
+    @extend %margin-0-auto;
+
+    .plan__package-name {
+      color: $color-plan-golden-package-name-text;
+    }
+
+    .plan__package-btn {
+      background-color: $color-plan-golden-btn-background;
+      border: 0.06667em solid #4b4b4b;
+    }
+  }
+
+  &__silver-package {
+    background-color: $color-plan-silver-package-background;
+    color: $color-plan-golden-package-text;
+    top: em(-10);
+    z-index: 99;
+    @include width-height(em(160), auto);
+    @extend %margin-0-auto;
+    @extend %left-0;
+    @extend %right-0;
+
+    .plan__package-name {
+      color: $color-plan-silver-package-name-text;
+    }
+
+    .plan__package-btn {
+      background-color: $color-plan-silver-btn-background;
+      color: $color-plan-text;
+    }
+  }
+
+  &__platinum-package {
+    background-color: $color-plan-platinum-package-background;
+    color: $color-plan-golden-package-text;
+    z-index: 9;
+    top: em(-20);
+    @include width-height(em(140), auto);
+    @extend %margin-0-auto;
+    @extend %left-0;
+    @extend %right-0;
+
+    .plan__package-name {
+      color: $color-plan-platinum-package-name-text;
+    }
+
+    .plan__package-btn {
+      background-color: $color-plan-platinum-btn-background;
+      color: $color-plan-text;
+    }
+  }
+
+  &__package-name {
+    @include text-size-line(em(12), em(14, 12));
+    @extend %text-transform-uppercase;
+  }
+
+  &__package-cost {
+    @include text-size-line(em(36), em(48, 36));
+
+    sup {
+      @include text-size-line(em(11, 36), em(13, 11));
+      @extend %vertical-align-super;
+    }
+  }
+
+  &__package-time {
+    margin: em(7, 12) 0;
+    @include text-size-line(em(12), em(14, 12));
+    @extend %text-transform-uppercase;
+  }
+
+  &__package-benefit {
+    @include text-size-line(em(11), em(20, 11));
+  }
+
+  &__package-btn {
+    background-color: $color-plan-btn-background;
+    margin-top: em(20, 11);
+    @include width-height(em(140, 11), em(32, 11));
+    @include text-size-line(em(11), em(32, 11));
+    @extend %display-inline-block;
+  }
+
+  &__radio-select-package {
+    @extend %text-align-center;
+
+    .main-radio-select-package {
+      color: $color-plan-radio-text;
+      @extend %text-transform-uppercase;
+      @include text-size-line(em(12), em(24, 12));
+    }
+
+    .active {
+      background-color: $color-background-btn-default;
+      @include border-corner-radius(em(50, 12), em(1, 12), $color-background-btn-default);
+      @include width-height(em(80, 12), em(24, 12));
+      @include text-size-line(em(12), em(24, 12));
+      @extend %display-inline-block;
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .plan {
+    .container-fluid {
+      padding: 0 em(86) em(80);
+    }
+
+    &__package {
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__radio-select-package {
+      display: none;
+    }
+
+    &__main-package {
+      padding: em(22) 0 em(32 );
+      margin: 0;
+      top: 0;
+      position: relative;
+      @include width-height(em(170), em(280));
+
+      .plan__package-btn {
+        line-height: em(40, 11);
+        @include width-height(em(120, 11), em(40, 11));
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .plan {
+    &__package {
+      margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__radio-select-package {
+      display: none;
+    }
+
+    &__main-package {
+      padding: em(22) 0 em(32 );
+      margin: 0;
+      top: 0;
+      position: relative;
+      @include width-height(em(270), em(390));
+
+      .plan__package-btn {
+        line-height: em(40, 16);
+        @include text-size-line(em(16), em(48, 16));
+        @include width-height(em(198, 16), em(48, 16));
+      }
+    }
+
+
+    &__package-name {
+      margin-bottom: em(30, 18);
+      @include text-size-line(em(18), em(20, 18));
+    }
+
+    &__package-cost {
+      @include text-size-line(em(64), em(76, 64));
+
+      sup {
+        @include text-size-line(em(24, 64), em(26, 24));
+      }
+    }
+
+    &__package-time {
+      margin: em(15, 18) 0 em(23, 18);
+      @include text-size-line(em(18), em(27, 18));
+    }
+
+    &__package-benefit {
+      @include text-size-line(em(16), em(24, 16));
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{% load compress %}
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Practice 3"/>
+    <meta name="keywords" content="HTML,CSS"/>
+    <meta name="author" content="Vu Phan"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon"/>
+    <title>Vu Phan Blog app</title>
+
+    {% compress css %}
+    <link href="{% static 'styles/main.scss' %}" type="text/x-scss" rel="stylesheet">
+    {% endcompress %}
+</head>
+
+<body>
+    {% include "header.html" %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include "footer.html" %}
+
+    <script type="text/javascript" src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap-sass/assets/javascripts/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

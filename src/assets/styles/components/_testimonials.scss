@@ -1,0 +1,152 @@
+
+/**
+ *
+ * Style CSS for testimonials section of mobile UI
+ *
+ */
+
+.testimonials {
+  color: $color-testimonials-text;
+
+  .container-fluid {
+    padding: 0 em(24);
+
+    .section-common__main-title {
+      padding-bottom: em(15, 20); // Inside title with font size is 20px
+    }
+  }
+
+  &__photo-avatar {
+    @extend %padding-0;
+    @include width-height(em(48), em(48));
+
+    img {
+      @include border-corner-radius(em(100), em(2), $color-testimonials-border-avatar);
+    }
+  }
+}
+
+.member-detail {
+  padding: 0 em(15) em(48) em(18);
+
+  &__name {
+    @include text-size-line(em(12), em(14, 12)); // Inside font size 12px
+    @extend %text-transform-uppercase;
+  }
+
+  &__position-job {
+    padding: em(10, 12) 0 em(4, 12);
+    color: $color-testimonials-position-job;
+    border-bottom: em(2, 12) solid $color-testimonials-border-line;
+    @include text-size-line(em(12), em(14, 12)); // Inside font size 12px
+  }
+
+  &__status {
+    padding: em(16, 11) 0 em(18, 11);
+    @include text-size-line(em(11), em(16, 11)); // Inside font size 12px
+  }
+
+  .social-menu {
+    a {
+      margin: 0 em(7);
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .testimonials {
+    .section-common__main-title {
+      padding-bottom: em(55, 32);
+    }
+
+    &__photo-avatar {
+      padding: 0;
+      @include width-height(em(64), em(64));
+    }
+  }
+
+  .member-detail {
+    .social-menu {
+      .sprite {
+        background-image: url("../images/sprites/tablet-icon.png");
+      }
+
+      .sprite-facebook-testimonials {
+        @include sprite-image-position(em(19), em(18), em(-108), em(-5));
+      }
+
+      .sprite-linkedin-testimonials {
+        @include sprite-image-position(em(20), em(18), em(-66), em(-109));
+      }
+
+      .sprite-twitter-testimonials {
+        @include sprite-image-position(em(24), em(18), em(-38), em(-148));
+      }
+
+      .sprite-google-plus-testimonials {
+        @include sprite-image-position(em(28), em(18), em(-41), em(-65));
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .testimonials {
+    .section-common__main-title {
+      padding-bottom: em(74, 44);
+    }
+
+    &__photo-avatar {
+      padding: 0;
+      @include width-height(em(96), em(96));
+    }
+  }
+
+  .member-detail {
+    padding: 0 em(25) em(107) em(28);
+
+    &__name {
+      @include text-size-line(em(16), em(20, 16));
+    }
+
+    &__position-job {
+      padding: 0 0 em(12, 12);
+      @include text-size-line(em(16), em(18, 16));
+    }
+
+    &__status {
+      padding: em(29, 16) 0 em(23, 16);
+      @include text-size-line(em(16), em(24, 16));
+    }
+
+    .social-menu {
+      .sprite {
+        background-image: url("../images/sprites/desktop-icon.png");
+      }
+
+      .sprite-facebook-testimonials {
+        @include sprite-image-position(em(19), em(19), em(-165), em(-5));
+      }
+
+      .sprite-linkedin-testimonials {
+        @include sprite-image-position(em(20), em(19), em(-123), em(-106));
+      }
+
+      .sprite-twitter-testimonials {
+        @include sprite-image-position(em(24), em(19), em(-208), em(-143));
+      }
+
+      .sprite-google-plus-testimonials {
+        @include sprite-image-position(em(27), em(18), em(-51), em(-72));
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+// Define mixin width height
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Define mixin size text
+@mixin text-size-line($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// Define mixin use border and border-radius on button
+@mixin border-corner-radius($radius, $border-width, $border-color) {
+  border-radius: $radius;
+  border: $border-width solid $border-color;
+}
+
+// Define mixin use background for block
+@mixin background-image($path) {
+  background-image: url($path-images + $path);
+  background-size: cover;
+}
+
+@mixin sprite-image-position($width, $height, $position-width, $position-height) {
+  width: $width;
+  height: $height;
+  background-position: $position-width $position-height;
+}
+
+// Define function convert px to em
+@function em($pixels, $parent-font-size: $font-size-default) {
+  @return $pixels / $parent-font-size * 1em;
+}

@@ -1,0 +1,22 @@
+
+/**
+ *
+ * Style CSS for social menu
+ *
+ */
+
+.main-social-menu {
+  @extend %float-left;
+
+  &:first-child a {
+    @extend %margin-left-0;
+  }
+
+  &:last-child a {
+    @extend %margin-right-0;
+  }
+
+  a {
+    margin: 0 em(10);
+  }
+}

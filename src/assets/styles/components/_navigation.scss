@@ -1,0 +1,67 @@
+
+/**
+ *
+ * Style css for main navigation
+ *
+ */
+
+.navigation {
+  @include text-size-line(em(12), em(24, 12));
+  @extend %display-flex;
+  @extend %justify-content-space-between;
+  @extend %text-transform-uppercase;
+
+  &-menu {
+    @extend %overflow-hidden;
+  }
+
+  .main-menu {
+    @extend %text-align-center;
+    @extend %float-left;
+
+    a {
+      color: $color-nav-menu-text-default;
+      padding: 0 em(10, 12);
+    }
+
+    &:first-child a {
+      @extend %padding-left-0;
+    }
+
+    &:last-child a {
+      @extend %padding-right-0;
+    }
+  }
+}
+
+/*===================================
+=             Ipad mini             =
+=====================================*/
+/* Portrait and Landscape */
+@media only screen and (min-width: 768px) {
+  .navigation {
+    @include text-size-line(em(12), em(29, 12));
+
+    .main-menu {
+      a {
+        padding: 0 em(16, 12);
+      }
+    }
+  }
+}
+
+/*================================================
+=            Laptop and large desktop            =
+================================================*/
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-width: 1024px) {
+  .navigation {
+    @include text-size-line(em(18), em(43, 18));
+
+    .main-menu {
+      a {
+        padding: 0 em(25, 18);
+      }
+    }
+  }
+}

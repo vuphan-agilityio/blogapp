@@ -1,0 +1,37 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+django = "==2.2"
+djangorestframework = "==3.8.0"
+django-extensions = "==2.1.4"
+django-filter = "==2.0.0"
+djangorestframework-filters = "==1.0.0.dev0"
+factory-boy = "==2.11.1"
+faker = "==1.0.4"
+python-dateutil = "*"
+setuptools = "*"
+drf-yasg = "*"
+coverage = "*"
+django-rest-auth = "==0.9.3"
+django-storages = "==1.5.2"
+boto3 = "==1.4.4"
+django-jet = "*"
+django-feedparser = "*"
+django-compressor = "*"
+cssmin = "*"
+jsmin = "*"
+django-libsass = "*"
+django-compressor-autoprefixer = "*"
+django-bower = "*"
+gunicorn = "*"
+graphene-django = "*"
+django-environ = "*"
+
+[requires]
+python_version = "3.7"
+
+[dev-packages]
+flake8 = "*"
