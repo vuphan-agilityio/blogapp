@@ -4,7 +4,7 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [packages]
-django = "==2.2"
+django = "==2.2.27"
 djangorestframework = "==3.8.0"
 django-extensions = "==2.1.4"
 django-filter = "==2.0.0"
